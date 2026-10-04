@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Summarize · SummarAI</title><link rel="stylesheet" href="/css/style.css"><script src="/js/main.js"></script></head><body><div id="nav"></div><main class="wrap">
+<section><h1>Summarize text</h1>
+<div class="grid g2" style="margin-bottom:14px">
+<div><label for="title">Title</label><input id="title" maxlength="150" placeholder="e.g. Climate report, Chapter 4 notes"></div>
+<div class="row" style="align-items:flex-end"><div style="flex:1"><label for="length">Summary length</label><select id="length"><option value="short">Short</option><option value="medium" selected>Medium</option><option value="detailed">Detailed</option></select></div>
+<div style="flex:1"><label for="mode">Method</label><select id="mode"><option value="extractive">Extractive</option><option value="abstractive">Abstractive (optional)</option></select></div></div></div>
+<div class="grid g2">
+<div><label for="text">Original text</label><textarea id="text" placeholder="Paste an article, notes or report here (at least 30 words)."></textarea><div class="meta" id="counts" aria-live="polite"></div></div>
+<div><label id="ol">Generated summary</label><div id="out" class="card out empty" aria-labelledby="ol" aria-live="polite">Your summary will appear here.</div><div class="tags" id="kw"></div></div></div>
+<div class="bar" id="bar" role="progressbar" aria-label="Summarizing"><i></i></div>
+<div class="row" style="margin-top:14px"><button class="btn primary" id="go">Summarize</button><button class="btn" id="clear">Clear</button><button class="btn" id="copy">Copy summary</button><button class="btn" id="dl">Download summary</button></div>
+<div id="msg" class="msg" role="status"></div><div class="stats" id="stats"></div>
+<div class="card" id="compare" hidden style="margin-top:18px"><h3>Original vs summary</h3><table><thead><tr><th></th><th>Words</th><th>Sentences</th></tr></thead><tbody></tbody></table></div></section>
+</main><div id="foot"></div><script src="/js/summarize.js"></script></body></html>
